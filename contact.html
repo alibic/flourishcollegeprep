@@ -116,17 +116,41 @@
     <button type="submit" class="form-submit">Submit Intake Form</button>
   </form>
   <div class="form-success" id="form-success">
-    <p style="font-size:1.5rem;margin-bottom:.5rem;">🌿</p>
-    <p>Thank you for reaching out! We'll be in touch soon to set up a call.</p>
+    <p style="font-size:2rem;margin-bottom:.75rem;">🌿</p>
+    <p style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;font-weight:500;margin-bottom:.6rem;">Your form has been submitted!</p>
+    <p style="color:rgba(240,244,238,.75);">Thank you for reaching out. We'll review your intake form and be in touch soon to set up a call.</p>
   </div>
 </div>
 <footer><p>© 2025 Flourish College Prep · flourishcollegeprep.com</p></footer>
 <script>
+  // Show success if redirected back with ?success=true (Netlify)
   const params=new URLSearchParams(window.location.search);
-  if(params.get('success')==='true'){document.getElementById('intake-form').style.display='none';document.getElementById('form-success').style.display='block';window.scrollTo(0,0);}
+  if(params.get('success')==='true'){
+    document.getElementById('intake-form').style.display='none';
+    document.getElementById('form-success').style.display='block';
+    window.scrollTo(0,0);
+  }
+
+  // Also intercept form submit to show inline success message
+  const form = document.getElementById('intake-form');
+  if(form){
+    form.addEventListener('submit', function(e){
+      // Let Netlify handle the actual submission (don't preventDefault)
+      // But show the success message after a brief delay for non-Netlify previews
+      setTimeout(function(){
+        form.style.display='none';
+        document.getElementById('form-success').style.display='block';
+        window.scrollTo(0,0);
+      }, 800);
+    });
+  }
+
   const toggle=document.getElementById('nav-toggle');
   const navUl=document.getElementById('nav-menu');
-  if(toggle&&navUl){toggle.addEventListener('click',()=>navUl.classList.toggle('open'));navUl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navUl.classList.remove('open')));}
+  if(toggle&&navUl){
+    toggle.addEventListener('click',()=>navUl.classList.toggle('open'));
+    navUl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navUl.classList.remove('open')));
+  }
 </script>
 </body>
 </html>
