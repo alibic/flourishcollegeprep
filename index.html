@@ -53,7 +53,7 @@
     .title-rule{width:44px;height:2px;background:linear-gradient(90deg,var(--moss),var(--stone));margin-bottom:2.2rem}
 
     /* ABOUT */
-    #about{background:var(--off-white)}
+    #about{background:var(--stone-pale)}
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
     .about-text p{color:var(--ink-mid);margin-bottom:1.3rem;font-size:1.05rem;line-height:1.85}
     .pillars{display:flex;flex-direction:column;gap:1.3rem}
@@ -62,6 +62,18 @@
     .pillar-dot{width:9px;height:9px;border-radius:50%;background:var(--moss);flex-shrink:0;margin-top:8px}
     .pillar h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--deep);margin-bottom:.35rem}
     .pillar p{font-size:.95rem;color:var(--ink-mid);margin:0;line-height:1.75}
+
+   
+    /* RESULTS */
+    #results { background: var(--off-white); }
+    .results-grid {display: grid;grid-template-columns: repeat(3, 1fr);gap: 1.5rem;}
+    .result-card {padding: 2.5rem 2rem;background: var(--white);border: 1px solid var(--stone-lt);text-align: center;transition: transform .2s, box-shadow .2s;}
+    .result-card:hover {transform: translateY(-4px);box-shadow: 0 12px 36px rgba(74,103,65,.08);}
+    .result-card h3 {font-family: 'Cormorant Garamond', serif;font-size: 2.4rem;font-weight: 400;color: var(--deep);margin-bottom: .6rem;}
+    .result-card p {font-size: .95rem;color: var(--ink-mid);line-height: 1.75;}
+
+/* responsive */
+@media(max-width:960px){.results-grid { grid-template-columns: 1fr; }}
 
     /* SERVICES */
     #services{background:var(--stone-pale)}
@@ -202,7 +214,7 @@
 <section class="hero" id="home">
   <div class="hero-content">
     <span class="hero-eyebrow">ACT · SAT · Academic Tutoring</span>
-    <h1>Learn to <em>flourish</em>,<br/>not just perform.</h1>
+    <h1>Tutoring with a <em>different</em> vision</h1>
     <p class="hero-sub">Flourish College Prep helps students build real confidence — not just test scores. We teach students how to learn, so they carry that skill far beyond the classroom.</p>
     <div class="hero-btns">
       <a href="#services" class="btn btn-primary">Our Services</a>
@@ -217,7 +229,7 @@
     <div class="about-grid">
       <div class="about-text fade-up">
         <span class="section-label">Our Mission</span>
-        <h2 class="section-title">Tutoring with a <em>different</em> vision</h2>
+        <h2 class="section-title">Learn to <em>flourish</em>,<br/>not just perform.</h2>
         <div class="title-rule"></div>
         <p>Flourish College Prep was created out of a vision of tutoring students differently. Our primary goal is to teach students how to learn — not just to fill academic gaps, but to equip kids to fill those gaps independently.</p>
         <p>We believe the best tutoring leads to less tutoring. Our goal is to give every student the tools, strategies, and confidence to face challenges on their own terms.</p>
@@ -226,6 +238,31 @@
         <div class="pillar fade-up d1"><div class="pillar-dot"></div><div><h4>Independence First</h4><p>Our goal is to transition every student to independence as quickly as possible. Tutoring should be a resource, not a crutch.</p></div></div>
         <div class="pillar fade-up d1"><div class="pillar-dot"></div><div><h4>Process Over Outcome</h4><p>We teach students how to think, not just what to think. The pathway to the best outcomes runs through process.</p></div></div>
         <div class="pillar fade-up d2"><div class="pillar-dot"></div><div><h4>Accessible to All</h4><p>We take every family's situation into consideration. Available scholarships ensures every student can get the support they need.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="section-inner fade-up">
+    <span class="section-label">Proven Outcomes</span>
+    <h2 class="section-title">Results that <em>speak for themselves</em></h2>
+    <div class="title-rule"></div>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <h3>+400 Points</h3>
+        <p>Maximum SAT score improvement achieved by our students through structured, high-impact preparation.</p>
+      </div>
+
+      <div class="result-card">
+        <h3>+14 Points</h3>
+        <p>Maximum ACT score increase, reflecting targeted strategy, content mastery, and test execution.</p>
+      </div>
+
+      <div class="result-card">
+        <h3>+2 Letter Grades</h3>
+        <p>Academic performance gains through consistent coaching, skill-building, and accountability.</p>
       </div>
     </div>
   </div>
