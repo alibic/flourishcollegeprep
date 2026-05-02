@@ -142,28 +142,190 @@
     footer{background:#1e2e1b;color:rgba(240,244,238,.4);text-align:center;padding:2rem 5rem;font-size:.76rem;letter-spacing:.08em}
 
     /* DARK MODE */
-    @media(prefers-color-scheme:dark){
+      @media(prefers-color-scheme:dark){
+
       :root{
-        --ink:#d8e4d2;--ink-mid:#a4b89c;--ink-soft:#748c6a;
-        --white:#1c2a19;--off-white:#172014;--black:#101810;
-        --stone-pale:#1c2820;--stone-lt:#2e3e2a;--moss-pale:#e0eedd;
-        --border:rgba(139,170,130,.15)
+        --ink:#E4EFE7;
+        --ink-mid:#B6C7BE;
+        --ink-soft:#8FA59A;
+
+        /* greener backgrounds */
+        --off-white:#18231C;     /* main page background (deep moss) */
+        --white:#1F2B22;         /* cards */
+        --black:#121A14;
+
+        --stone-pale:#1C2821;    /* alternating sections */
+        --stone-lt:#2F3E34;
+
+        /* brand colors (slightly lifted for dark mode) */
+        --moss:#6F8F6A;
+        --moss-lt:#A7C0A4;
+        --moss-pale:#E6F2E3;
+
+        --deep:#E8AFCF;   /* pink replaces purple */
+        --light:#F5C9EB;
+
+        --border:rgba(167,192,164,.18);
       }
-      body{background:#172014;color:#d8e4d2}
-      .pillar{background:#1c2a19;border-color:#2e3e2a}
-      .service-card{background:#1c2a19;border-color:#2e3e2a}
-      .service-card h3{color:#d8e4d2}
-      .service-contact{background:#172014;border-color:#2e3e2a}
-      .section-title{color:#d8e4d2}
-      .bio-card{border-color:#2e3e2a}
-      .bio-name{color:#d8e4d2}
-      .price-card{background:#1c2a19;border-color:#2e3e2a}
-      .price-card h3{color:#d8e4d2}
-      .price-num{color:var(--moss-lt)}
-      .guide-card{background:#1c2a19;border-color:#2e3e2a}
-      .pricing-note{background:#1c2a19;border-left-color:var(--stone)}
-      nav ul{background:#1e2e1b;border-bottom-color:rgba(240,244,238,.12)}
+
+      body{
+        background:var(--off-white);
+        color:var(--ink);
       }
+
+      /* NAV */
+      nav{
+        background:#1B2A22;
+        border-bottom:1px solid rgba(255,255,255,.06);
+      }
+
+      nav ul{
+        background:#1B2A22;
+      }
+
+      nav ul a{
+        color:rgba(228,239,231,.75);
+      }
+
+      /* HERO */
+      .hero{
+        background:
+          radial-gradient(
+            ellipse at 70% 40%,
+            rgba(232,175,207,.10),
+            transparent 60%
+          ),
+          linear-gradient(
+            180deg,
+            #1B2A22 0%,
+            #18231C 100%
+          );
+      }
+
+      .hero h1{
+        color:var(--ink);
+      }
+
+      .hero h1 em{
+        color:var(--light);
+      }
+
+      .hero-sub{
+        color:var(--ink-soft);
+      }
+
+      /* SECTIONS (subtle green variation for rhythm) */
+      #about,
+      #results,
+      #team{
+        background:var(--off-white);
+      }
+
+      #services,
+      #pricing{
+        background:var(--stone-pale);
+      }
+
+      .section-title{
+        color:var(--ink);
+      }
+
+      .section-title em{
+        color:var(--light);
+      }
+
+      .section-label{
+        color:var(--moss-lt);
+      }
+
+      /* CARDS (green-tinted depth) */
+      .pillar,
+      .service-card,
+      .price-card,
+      .guide-card,
+      .result-card{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(167,192,164,0.05),
+            rgba(0,0,0,0.15)
+          ),
+          var(--white);
+
+        border:1px solid var(--border);
+        box-shadow:0 8px 32px rgba(0,0,0,.30);
+      }
+
+      .service-card h3,
+      .price-card h3,
+      .bio-name{
+        color:var(--ink);
+      }
+
+      .pillar p,
+      .service-card p,
+      .price-desc,
+      .guide-card p,
+      .bio-text p{
+        color:var(--ink-mid);
+      }
+
+      /* INTERACTIONS */
+      .service-card:hover,
+      .result-card:hover,
+      .price-card:hover{
+        transform:translateY(-4px);
+        box-shadow:0 16px 48px rgba(0,0,0,.40);
+      }
+
+      /* BUTTONS */
+      .btn-primary,
+      .btn-moss{
+        background:var(--light);
+        color:#3a1f33;
+      }
+
+      .btn-primary:hover,
+      .btn-moss:hover{
+        background:#edb8de;
+      }
+
+      .btn-ghost{
+        border:1px solid rgba(255,255,255,.2);
+        color:var(--ink);
+      }
+
+      .btn-ghost:hover{
+        background:rgba(255,255,255,.06);
+      }
+
+      /* CONTACT */
+      #contact{
+        background:linear-gradient(
+          180deg,
+          #1B2A22 0%,
+          #16241D 100%
+        );
+      }
+
+      #contact .section-title{
+        color:var(--ink);
+      }
+
+      #contact .section-title em{
+        color:var(--light);
+      }
+
+      .contact-sub{
+        color:var(--ink-soft);
+      }
+
+      /* FOOTER */
+      footer{
+        background:#141E17;
+        color:rgba(228,239,231,.4);
+      }
+    }
 
     /* FADE */
     .fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
