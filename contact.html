@@ -104,9 +104,33 @@
       </div>
     </div>
     <div class="form-group"><label for="financial">Financial constraints or session limit (optional)</label><textarea id="financial" name="financial" placeholder="Let us know any budget limits or a maximum number of sessions in mind. We work with all families."></textarea></div>
-    <div class="form-policy">
-      <input type="checkbox" id="policy" name="policy" required/>
-      <label for="policy">I have read the <a href="/policies" target="_blank">policies and guidelines</a> of Flourish College Prep *</label>
+    <div class="form-group">
+      <label>Preferred tutoring method</label>
+      <div class="learning-style-grid">
+        <input class="ls-option" type="radio" id="tm-inperson" name="tutoring_method" value="In-Person"/><label class="ls-label" for="tm-inperson">In-Person</label>
+        <input class="ls-option" type="radio" id="tm-remote" name="tutoring_method" value="Remote"/><label class="ls-label" for="tm-remote">Remote</label>
+        <input class="ls-option" type="radio" id="tm-either" name="tutoring_method" value="Either works"/><label class="ls-label" for="tm-either">Either works</label>
+      </div>
+      <p style="margin-top:.6rem;font-size:.82rem;color:rgba(250,252,249,.42);line-height:1.6;">We offer in-person tutoring throughout the Portland, ME area. Remote sessions are available anywhere.</p>
+    </div>
+    <div class="form-group"><label for="student-description">Tell us about your student</label><textarea id="student-description" name="student_description" style="min-height:130px;" placeholder="What are their interests and hobbies? What subjects or skills are they strongest in? Where do they tend to struggle most? Any other context that would help us find the right fit&#8230;"></textarea></div>
+    <div class="form-group">
+      <label>Scheduling preferences</label>
+      <div class="learning-style-grid" style="margin-bottom:.6rem;">
+        <input class="ls-option" type="checkbox" id="sched-mon" name="sched_days" value="Monday"/><label class="ls-label" for="sched-mon">Mon</label>
+        <input class="ls-option" type="checkbox" id="sched-tue" name="sched_days" value="Tuesday"/><label class="ls-label" for="sched-tue">Tue</label>
+        <input class="ls-option" type="checkbox" id="sched-wed" name="sched_days" value="Wednesday"/><label class="ls-label" for="sched-wed">Wed</label>
+        <input class="ls-option" type="checkbox" id="sched-thu" name="sched_days" value="Thursday"/><label class="ls-label" for="sched-thu">Thu</label>
+        <input class="ls-option" type="checkbox" id="sched-fri" name="sched_days" value="Friday"/><label class="ls-label" for="sched-fri">Fri</label>
+        <input class="ls-option" type="checkbox" id="sched-sat" name="sched_days" value="Saturday"/><label class="ls-label" for="sched-sat">Sat</label>
+        <input class="ls-option" type="checkbox" id="sched-sun" name="sched_days" value="Sunday"/><label class="ls-label" for="sched-sun">Sun</label>
+      </div>
+      <div class="learning-style-grid">
+        <input class="ls-option" type="checkbox" id="sched-morning" name="sched_times" value="Morning (before noon)"/><label class="ls-label" for="sched-morning">Mornings</label>
+        <input class="ls-option" type="checkbox" id="sched-afternoon" name="sched_times" value="Afternoon (12&ndash;5pm)"/><label class="ls-label" for="sched-afternoon">Afternoons</label>
+        <input class="ls-option" type="checkbox" id="sched-evening" name="sched_times" value="Evening (after 5pm)"/><label class="ls-label" for="sched-evening">Evenings</label>
+      </div>
+      <textarea name="sched_notes" style="margin-top:.75rem;min-height:70px;" placeholder="Any other scheduling notes &#8212; recurring conflicts, upcoming breaks, or a target start date&#8230;"></textarea>
     </div>
     <button type="submit" class="form-submit">Submit Intake Form</button>
   </form>
