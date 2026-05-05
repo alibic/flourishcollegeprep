@@ -112,6 +112,11 @@
     .pricing-note{padding:1.8rem 2rem;border-left:3px solid var(--stone);background:var(--white)}
     .pricing-note p{font-size:1rem;color:var(--ink-mid);line-height:1.85;margin-bottom:.8rem}
     .pricing-note p:last-child{margin-bottom:0}
+    .scholarship-box{margin-top:1.8rem;padding:1.8rem 2rem;background:var(--moss);border:1px solid var(--moss);display:flex;gap:1.2rem;align-items:flex-start}
+    .scholarship-icon{font-size:1.5rem;line-height:1;flex-shrink:0;margin-top:.1rem}
+    .scholarship-box-label{font-size:.7rem;letter-spacing:.2em;font-weight:500;text-transform:uppercase;color:var(--moss-pale);margin-bottom:.4rem}
+    .scholarship-box p{font-size:1rem;color:rgba(240,244,238,.8);line-height:1.85;margin:0}
+    .scholarship-box strong{color:var(--moss-pale)}
 
     /* CONTACT */
     #contact{background:var(--moss);color:var(--white);text-align:center;padding:7rem 5rem}
@@ -309,6 +314,13 @@
         color:var(--ink-soft);
       }
 
+      /* POPULAR BADGE */
+      .price-badge{
+        color:#3a1f33;
+      }
+
+      /* SCHOLARSHIP BOX — inherits dark mode --moss and --moss-pale via CSS variables, no override needed */
+
       /* FOOTER */
       footer{
         background:#141E17;
@@ -390,7 +402,12 @@
       <div class="pricing-note fade-up">
         <p>A strong test score can open real doors &mdash; including merit-based scholarships. The University of Maine, for example, offers a full-ride merit scholarship, and strong scores help students stand out.</p>
         <p>At Flourish, <strong style="color:var(--moss);">we take all factors into consideration.</strong> Please don&rsquo;t hesitate to share your financial limitations &mdash; we&rsquo;ll build a plan that works for your family. Once you&rsquo;ve worked with us, we&rsquo;re always available. If tutoring becomes unaffordable, we&rsquo;re happy to provide resources so students can keep preparing independently.</p>
-        <p>We also have scholarships available for students who need extra help to reach their goals but without the financial means to do so. Please fill out a scholarship application if this describes you.</p>
+      </div>
+      <div class="scholarship-box fade-up">
+        <div>
+          <div class="scholarship-box-label">Scholarships Available</div>
+          <p>We have scholarships available for students who need extra help to reach their goals but without the financial means to do so. Please fill out our intake form and request a scholarship application if this describes you.</p>
+        </div>
       </div>
       <div style="text-align:center;margin-top:3rem;">
         <a href="contact.html" class="btn btn-primary">Start Your Intake Form</a>
