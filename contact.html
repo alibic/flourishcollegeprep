@@ -135,9 +135,8 @@
     <button type="submit" class="form-submit">Submit Intake Form</button>
   </form>
   <div class="form-success" id="form-success">
-    <p style="font-size:2rem;margin-bottom:.75rem;">🌿</p>
-    <p style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;font-weight:500;margin-bottom:.6rem;">Your form has been submitted!</p>
-    <p style="color:rgba(240,244,238,.75);">Thank you for reaching out. We'll review your intake form and be in touch soon to set up a call.</p>
+    <p style="color:rgba(240,244,238,.75);">Your form has been submitted!</p>
+    <p style="color:rgba(240,244,238,.75);">Thank you for reaching out. We'll review your intake form and be in touch soon.</p>
   </div>
 </div>
 <footer><p>© 2025 Flourish College Prep · flourishcollegeprep.com</p></footer>
@@ -170,6 +169,12 @@
     toggle.addEventListener('click',()=>navUl.classList.toggle('open'));
     navUl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navUl.classList.remove('open')));
   }
+</script>
+<script>document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Remove this line if you want the form to actually submit to a server
+  document.getElementById('confirmation').style.display = 'block';
+  this.reset(); // Optionally clears the form
+});
 </script>
 </body>
 </html>
